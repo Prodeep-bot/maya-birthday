@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6e6, #ffb3c6);
+    color: #333;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Screens Management */
+.screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: opacity 0.8s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Intro Screen Styling */
+.content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 1.5s ease;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #d6336c;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #d6336c;
+    margin: 20px 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#yes-btn {
+    background: #d6336c;
+    color: white;
+    box-shadow: 0 4px 15px rgba(214, 51, 108, 0.4);
+}
+
+#yes-btn:hover {
+    background: #b02a5b;
+    transform: scale(1.05);
+}
+
+#no-btn {
+    background: #f8f9fa;
+    color: #888;
+    border: 2px solid #ddd;
+}
+
+#no-btn:hover {
+    background: #e9ecef;
+}
+
+/* Gallery Screen */
+.gallery-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-title {
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(214, 51, 108, 0.3);
+}
+
+/* Final Note Styling */
+.final-note-container {
+    margin-top: 60px;
+    padding-bottom: 60px;
+    animation: fadeIn 2s ease;
+}
+
+.note-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #d6336c;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.yellow-note-wrapper {
+    background: #fffacd; /* Aesthetic yellow */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    display: inline-block;
+    transform: rotate(-2deg);
+    transition: transform 0.5s ease;
+}
+
+.yellow-note-wrapper:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.yellow-note {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.ending-text {
+    margin-top: 40px;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    color: #d6336c;
+}
+
+/* Floating Music Button */
+#music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #fff;
+    color: #d6336c;
+    border: 2px solid #d6336c;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#music-btn:hover {
+    background: #d6336c;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .photo { height: 250px; }
+    .gallery-title { font-size: 2.5rem; }
+    .ending-text { font-size: 1.5rem; }
+}
